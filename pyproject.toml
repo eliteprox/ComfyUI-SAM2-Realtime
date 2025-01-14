@@ -1,6 +1,6 @@
 [project]
 name = "Segment Anything 2 Realtime (Fork)"
-version = "0.1.0"
+version = "0.1.1"
 description = "A brief description of your project"
 dependencies = [
     "sam2_realtime @ file://./sam2_realtime"
