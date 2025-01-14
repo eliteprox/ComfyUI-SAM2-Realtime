@@ -6,9 +6,16 @@ dependencies = [
     "sam2_realtime @ file://./sam2_realtime"
 ]
 
+[project.urls]
+Repository = "https://github.com/eliteprox/ComfyUI-SAM2-Realtime"
+
 [build-system]
 requires = [
-    "setuptools>=61.0",  
-    "torch>=2.3.1",
-    ]
+"setuptools>=61.0",  
+"torch>=2.3.1",
+]
 build-backend = "setuptools.build_meta"
+
+[tool.comfy]
+PublisherId = "sam2-realtime-node"
+DisplayName = "sam2-realtime"
