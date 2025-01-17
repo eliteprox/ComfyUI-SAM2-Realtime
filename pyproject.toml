@@ -1,7 +1,7 @@
 [project]
 name = "sam2_realtime_forktest"
 description = "This extension provides object segmentation capabilities for ComfyUI workflows"
-version = "0.0.24"
+version = "0.0.25"
 license = { file = "LICENSE" }
 dependencies = [
     "torch>=2.3.1",
