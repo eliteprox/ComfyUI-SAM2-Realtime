@@ -1,6 +1,6 @@
 [project]
 name = "sam2_realtime"
-version = "0.0.20"
+version = "0.0.21"
 
 [tool.setuptools]
 
