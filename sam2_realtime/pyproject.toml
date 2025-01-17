@@ -1,0 +1,9 @@
+[project]
+name = "sam2_realtime"
+version = "0.0.12"
+
+[tool.setuptools]
+
+[tool.setuptools.packages.find]
+include = ["csrc"]
+exclude = ["modeling"]
