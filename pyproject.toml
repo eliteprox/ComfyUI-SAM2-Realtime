@@ -1,7 +1,7 @@
 [project]
 name = "sam2_realtime_forktest"
 description = "This extension provides object segmentation capabilities for ComfyUI workflows"
-version = "0.0.13"
+version = "0.0.14"
 license = { file = "LICENSE" }
 dependencies = [
     "torch>=2.3.1",
@@ -30,3 +30,8 @@ PublisherId = "eliteprox"
 DisplayName = "ComfyUI-SAM2-Realtime-TEST"
 Icon = ""
 
+[tool.setuptools]
+
+[tool.setuptools.packages.find]
+include = ["sam2_realtime"]
+exclude = ["sam2_configs"]
