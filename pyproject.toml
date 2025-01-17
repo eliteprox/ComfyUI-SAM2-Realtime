@@ -1,7 +1,7 @@
 [project]
-name = "realtime_forktest_test"
+name = "sam2_realtime_forktest"
 description = "This extension provides object segmentation capabilities for ComfyUI workflows"
-version = "0.0.2"
+version = "0.0.11"
 license = { file = "LICENSE" }
 dependencies = [
     "torch>=2.3.1",
@@ -31,7 +31,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.comfy]
 PublisherId = "eliteprox"
-DisplayName = "realtime_forktest"
+DisplayName = "ComfyUI SAM2 Realtime TEST"
 Icon = ""
 
 [tool.setuptools]
