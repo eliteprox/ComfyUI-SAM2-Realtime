@@ -1,7 +1,7 @@
 [project]
-name = "realtime_forktest"
+name = "realtime_forktest_test"
 description = "This extension provides object segmentation capabilities for ComfyUI workflows"
-version = "0.0.1"
+version = "0.0.2"
 license = { file = "LICENSE" }
 dependencies = [
     "torch>=2.3.1",
@@ -33,5 +33,9 @@ Icon = ""
 [tool.setuptools]
 
 [tool.setuptools.packages.find]
-include = ["sam2_realtime"]
-exclude = ["sam2_configs"]
+where = ["."]
+include = ["sam2_realtime*"]
+namespaces = true
+
+#include = ["sam2_realtime","sam2_realtime/modeling"]
+#exclude = ["sam2_configs"]
