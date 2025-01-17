@@ -11,26 +11,6 @@ os.environ["TORCH_CUDA_ARCH_LIST"] = "8.0 8.6+PTX 8.7 9.0 9.0a"
 from setuptools import find_packages, setup
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
-# Package metadata
-NAME = "SAM2 Realtime"
-VERSION = "1.0"
-DESCRIPTION = "SAM2 Realtime: Segment Anything for Video Streams"
-URL = "https://github.com/facebookresearch/segment-anything-2"
-AUTHOR = "Peter Schroedl"
-AUTHOR_EMAIL = "peter_schroedl@me.com"
-LICENSE = "Apache 2.0"
-
-# Required dependencies
-REQUIRED_PACKAGES = [
-    "torch>=2.3.1",
-    "torchvision>=0.18.1",
-    "numpy>=1.24.4",
-    "tqdm>=4.66.1",
-    "hydra-core>=1.3.2",
-    "iopath>=0.1.10",
-    "pillow>=9.4.0",
-]
-
 def get_extensions():
     srcs = ["sam2_realtime/csrc/connected_components.cu"]
     compile_args = {
@@ -48,16 +28,6 @@ def get_extensions():
 
 # Setup configuration
 setup(
-    name=NAME,
-    version=VERSION,
-    description=DESCRIPTION,
-    url=URL,
-    author=AUTHOR,
-    author_email=AUTHOR_EMAIL,
-    license=LICENSE,
-    packages=find_packages(),
-    install_requires=REQUIRED_PACKAGES,
-    python_requires=">=3.10.15",
     ext_modules=get_extensions(),
     cmdclass={"build_ext": BuildExtension.with_options(no_python_abi_suffix=True)},
 )
